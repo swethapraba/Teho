@@ -162,12 +162,12 @@ function addEventToCal()
     'start':
     {
       'dateTime': startDate,////
-      'timeZone': startZone;
+      'timeZone': startZone
     },
     'end': ////
     {
       'dateTime': endDate,////
-      'timeZone': endZone;
+      'timeZone': endZone
     },
     /**'attendees': [//// we might not need this since just insert to primary calendar. made for sharing
       {'email': 'lpage@example.com'},////
