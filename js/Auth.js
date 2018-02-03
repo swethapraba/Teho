@@ -142,27 +142,36 @@ function loadDayEvents() {
  * Parameters: take in ________
  * Outcome: add event to GCal with provided specs
  */
-function addEventToCal(name)
+function addEventToCal()
 {
-  var eventSummary = name; //'summary' field needs a string
-  var buildDescript = 'A chance to hear more about Google\'s developer products.'; //takes string for description //needs editing
+  var name = "test"; //temporary for parameter
+  ////////////////////////////////
+  var eventSummary = name; //'summary' field needs a string. PARAM
+  ///include some parameters here to help with building description 
+  /**
+  **/
+  var buildDescript = 'A chance to hear more about Google\'s developer products.'; //build string 
+  var startDate = '2018-05-28T09:00:00-07:00'; //PARAM
+  var endDate = '2018-05-28T17:00:00-07:00'; //PARAM
+  var startZone = 'America/Los_Angeles'; //param
+  var endZone = 'America/Los_Angeles';//PARAM
   var event = {
     'summary': eventSummary,////
     'description': buildDescript,////
     'colorId': '1',//This or code 3 is the purple shade we want, will have to experiment
     'start':
     {
-      'dateTime': '2018-05-28T09:00:00-07:00',////
-      'timeZone': 'America/Los_Angeles'//
+      'dateTime': startDate,////
+      'timeZone': startZone;
     },
     'end': ////
     {
-      'dateTime': '2018-05-28T17:00:00-07:00',////
-      'timeZone': 'America/Los_Angeles'////
+      'dateTime': endDate,////
+      'timeZone': endZone;
     },
-    'attendees': [////
+    /**'attendees': [//// we might not need this since just insert to primary calendar. made for sharing
       {'email': 'lpage@example.com'},////
-    ],
+    ],**/
     'reminders': {//double check fyi
       'useDefault': false,// double check that this stops all reminders
       /**'overrides': [// we are not using reminders
