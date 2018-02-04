@@ -1,4 +1,23 @@
-<!DOCTYPE html>
+<html>
+  <head>
+    <title>Google Calendar API Quickstart</title>
+    <meta charset='utf-8' />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="{{url_for('static', filename='Auth.js')}}"></script>
+    <script async defer src="https://apis.google.com/js/api.js" onload="this.onload=function(){};handleClientLoad()"
+    onreadystatechange="if (this.readyState === 'complete') this.onload()"></script>
+  </head>
+  <body>
+    <p>Google Calendar API Quickstart</p>
+    <!--Add buttons to initiate auth sequence and sign out-->
+    <button id="authorize-button" onclick="handleAuthClick()">Authorize</button>
+    <button id="signout-button" onclick=handleSignoutClick()>Sign Out</button>
+    <button id="authorize-button" onclick="callEventAdd()">Add event to Calendar</button>
+    <button id="authorize-button" onclick="loadDayEvents()">Get available times</button>
+  </body>
+</html>
+
+<!--<!DOCTYPE html>
 <html>
   <head>
     <title>Google Calendar API Quickstart</title>
@@ -7,7 +26,7 @@
   <body>
     <p>Google Calendar API Quickstart</p>
 
-    <!--Add buttons to initiate auth sequence and sign out-->
+    <!-Add buttons to initiate auth sequence and sign out
     <button id="authorize-button" style="display: none;">Authorize</button>
     <button id="signout-button" style="display: none;">Sign Out</button>
 
@@ -32,4 +51,4 @@
     <button id="authorize-button" onclick="getTimes()">Get available times</button>
 
   </body>
-</html>
+</html>->
