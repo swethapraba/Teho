@@ -30,3 +30,7 @@ def breathe():
 @teho.route('/log_after')
 def log_after():
 	return render_template('log-after.html')
+
+@teho.route('/data')
+def data():
+	return render_template('data.html')
