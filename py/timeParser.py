@@ -2,10 +2,12 @@ def parse_time(List):
     Modified = [int(x.split(':')[0])*60+int(x.split(':')[1]) for x in List]
     #Create a list with the time in string format parsed and converted into integers (in minutes)
     return Modified
+
 def min_to_time(List):
     return [str(x//60)+":"+str(x%60)+("0:" if x%60<10 else ":")+"00" for x in List]
-    #Create a list with time in integers(in minutes) converted back into the string format 
+    #Create a list with time in integers(in minutes) converted back into the string format
     #Essentially the inverse of parse_time function
+
 def concatenate(A,B):
     assert len(A)==len(B)
     C = []
@@ -13,14 +15,15 @@ def concatenate(A,B):
         C.append(A[i]+'-'+B[i])
         i += 1
     return C
-    #Return a concatenated list with elements from A, B paired up individually
+#Return a concatenated list with elements from A, B paired up individually
+
 def schedule(start,end):
     start,end = parse_time(start),parse_time(end)
     #Parse the start and end lists
     first_start = start[0]
     #Locate the first starting time of the day
     free_start,free_end,free_interval = [],[],[]
-    
+
     if first_start > 0:
         free_start.append(0)
         free_end.append(first_start)
@@ -39,17 +42,20 @@ def schedule(start,end):
         free_start.append(end[len(end)-1])
         free_end.append(23*60+59)
     #Check if there is free time interval after the last time slot of the day
-    
+
     final_free_start = min_to_time(free_start)
     final_free_end = min_to_time(free_end)
     free_schedule = concatenate(final_free_start,final_free_end)
-    #Concatennating all the start and end free time
+    #Concatenating all the start and end free time
     return free_schedule
+
 def break_insert(frequency,preferred_time_range,free_interval):
     if frequency > len(free_interval):
         break_insert(len(free_interval),preferred_time_range, free_interval)
-    else:
+    #else:
 
+def main():
+    schedule(param1, param2)
 #Test
 #A = parse_time(["2:00:00","4:00:00","8:00:00","12:00:00"])
 #A

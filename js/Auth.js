@@ -7,7 +7,7 @@ var DISCOVERY_DOCS = ["https://www.googleapis.com/discovery/v1/apis/calendar/v3/
 
 // Authorization scopes required by the API; multiple scopes can be
 // included, separated by spaces.
-var SCOPES = "https://www.googleapis.com/auth/calendar.readonly";
+var SCOPES = "https://www.googleapis.com/auth/calendar";
 
 var authorizeButton = document.getElementById('authorize-button');
 var signoutButton = document.getElementById('signout-button');
@@ -139,6 +139,23 @@ function loadDayEvents() {
 }
 
 /**
+ * Calls python function to retrieve the available time blocks.
+ */
+function getTimes(start, end) {
+  $.ajax({
+    type: "POST",
+    url: "~/py/timeParser.py",
+    data: {
+      param1: start,
+      param2: end
+    }
+  }).done(function( o ) {
+     print(o)
+     // add event to calendar
+  });
+}
+
+/**
  * Parameters: take in ________
  * Outcome: add event to GCal with provided specs
  */
@@ -147,10 +164,10 @@ function addEventToCal()
   var name = "test"; //temporary for parameter
   ////////////////////////////////
   var eventSummary = name; //'summary' field needs a string. PARAM
-  ///include some parameters here to help with building description 
+  ///include some parameters here to help with building description
   /**
   **/
-  var buildDescript = 'A chance to hear more about Google\'s developer products.'; //build string 
+  var buildDescript = 'A chance to hear more about Google\'s developer products.'; //build string
   var startDate = '2018-05-28T09:00:00-07:00'; //PARAM
   var endDate = '2018-05-28T17:00:00-07:00'; //PARAM
   var startZone = 'America/Los_Angeles'; //param
