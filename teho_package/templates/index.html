@@ -4,7 +4,7 @@
     <meta charset='utf-8' />
 
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
-    <link href="https://fonts.googleapis.com/css?family=Comfortaa|Arimo" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Comfortaa|Arimo|Roboto" rel="stylesheet">
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="{{url_for('static', filename='Auth.js')}}"></script>
@@ -13,15 +13,38 @@
   </head>
   <body>
     <div class="container">
-      <h1>teho</h1>
-      <h2>take back control of your day</h2>
-      <h3>personalized, automatic downtime when you need it the most</h3>
+      <div class="heading">
+        <h1>teho</h1>
+        <h2>take back control of your day</h2>
+      </div>
+
+      <div class="main">
+        <div class="cal-icon">
+          <div class="cal-event-1">
+            lunch at chipotle <br>
+            <span class="timing">12 - 1pm</span>
+          </div>
+          <div class="teho-event">
+            take 5 minutes to breathe <br>
+            <span class="timing">1 - 1:05pm</span>
+          </div>
+          <div class="cal-event-2">
+            sales call with andrea <br>
+            <span class="timing">1:15 - 2:15pm</span>
+          </div>
+        </div>
+        <h3>personalized, automatic downtime when you need it the most</h3>
+      </div>
+
+      <div class="footer">
+        <!--Add buttons to initiate auth sequence and sign out-->
+        <button id="authorize-button" onclick="handleAuthClick()"><span class="g-icon"></span>Sign in with Google</button>
+        <!-- <button id="signout-button" onclick="handleSignoutClick()">sign out</button>
+        <button id="authorize-button" onclick="callEventAdd()">add event to calendar</button>
+        <button id="authorize-button" onclick="loadDayEvents()">get available times</button> -->
+
+      </div>
 
     </div>
-    <!--Add buttons to initiate auth sequence and sign out-->
-    <button id="authorize-button" onclick="handleAuthClick()">Authorize</button>
-    <button id="signout-button" onclick=handleSignoutClick()>Sign Out</button>
-    <button id="authorize-button" onclick="callEventAdd()">Add event to Calendar</button>
-    <button id="authorize-button" onclick="loadDayEvents()">Get available times</button>
   </body>
 </html>
