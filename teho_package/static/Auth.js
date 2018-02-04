@@ -159,37 +159,37 @@ function callEventAdd()
 {
   //var start = new Date('2018-05-28T17:00:00-07:00');
   //var end = new Date('2018-05-28T09:00:00-07:00');
-  var start = "2018-05-28T17:00:00-07:00";
-  var end = "2018-05-28T09:00:00-07:00";
-  addEventToCal('meditate',5,'www.google.com', start, end,'America/LosAngeles');
+  //var start = "2018-05-28T17:00:00-07:00";
+  //var end = "2018-05-28T09:00:00-07:00";
+  addEventToCal('meditate','5','www.google.com','2018-05-28T09:00:00-07:00','2018-05-28T17:00:00-07:00','America/Los_Angeles');
 }
 
 /**
  * Parameters: take in ________
  * Outcome: add event to GCal with provided specs
  */
+//function addEventToCal(activity,duration,url,starting,ending,tzone)
 function addEventToCal(activity,duration,url,starting,ending,tzone)
 {
   //starting = '2018-02-28T09:00:00-07:00';
   //ending = '2018-02-28T17:00:00-07:00';
-
-  var eventSummary = "Take " + duration + "minutes to " + activity; //'summary' field needs a string.PARAM
+  var eventSummary = "Take "+duration+" minutes to "+activity; //'summary' field needs a string.PARAM
   var buildDescript = "Here\'s Teho\'s recommendation for you: " + url; //build string
-  var startDate = starting;
-  var endDate = ending;
-  var zone = tzone;
+  var startDate = starting;//'2018-05-28T09:00:00-07:00';
+  var endDate = ending; //'2018-05-28T17:00:00-07:00';
+  var zone = tzone;//'America/Los_Angeles';
   var event = {
-    'summary': eventSummary,//
+    'summary': eventSummary,
     'description': buildDescript,//
     'colorId': '1',//This or code 3 is the purple shade we want, will have to experiment
     'start':
     {
-      'dateTime': startDate,//
+      'dateTime': startDate,
       'timeZone': zone
     },
     'end': //
     {
-      'dateTime': endDate,//
+      'dateTime': endDate,
       'timeZone': zone
     },
     /**'attendees': [//// we might not need this since just insert to primary calendar. made for sharing
