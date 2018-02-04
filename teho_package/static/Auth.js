@@ -189,7 +189,7 @@ function addEventToCal()
     'start':
     {
       'dateTime': startDate,//
-      'timeZone': 'America/Los_Angeles'//zone
+      'timeZone': zone
     },
     'end': //
     {
@@ -197,7 +197,7 @@ function addEventToCal()
       'timeZone': zone
     },
     /**'attendees': [//// we might not need this since just insert to primary calendar. made for sharing
-      {'email': 'lpageexample.com'},////
+      {'email': 'lpage@example.com'},////
     ],**/
     'reminders': {//double check fyi
       'useDefault': false,// double check that this stops all reminders
