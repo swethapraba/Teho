@@ -128,9 +128,13 @@ def break_insert(preferred_time_range,start,end):
         #The above for loop iterates through the nested lists to determine a match time block using the
         #preference time range and the free time range.
     simplified = reverse_nested(result)
+    print(simplified)
     def recommendation(duration):
         #This method will use the duration for break determined by the user to give the recommended time range
-        i = 0
+        i = 2
+        simplified[0]=simplified[1]-30-duration
+        simplified[1]=simplified[1]-30
+        #By default, the early break happens 30+duration minutes before the first event of the day
         while i<len(simplified):
             simplified[i+1] = simplified[i]+duration
             i += 2
