@@ -15,5 +15,9 @@ Everything must be in a single directory (directory name is Teho)
         - have handlers called view functions which are mapped to root url's so flask knows which logic to execute when client requests url
       - routes.py file: contains view functions
   - top level python script that defines flask application instance (script name is flask_script.py)
-  - templates folder: contains html files
+    - templates folder: contains html files
+      - inside index.html:
+        - placeholders for the dynamic content, enclosed in {{ ... }} sections. These placeholders represent the parts of the page that are variable and will only be known at runtime.
+        - The operation that converts a template into a complete HTML page is called rendering. To render the template I had to import a function that comes with the Flask framework called render_template(). This function takes a template filename and a variable list of template arguments and returns the same template, but with all the placeholders in it replaced with actual values.
+        - The render_template() function invokes the Jinja2 template engine that comes bundled with the Flask framework. Jinja2 substitutes {{ ... }} blocks with the corresponding values, given by the arguments provided in the render_template() call.
   - static folder: contains javascript and css files
