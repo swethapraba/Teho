@@ -1,0 +1,60 @@
+/* 
+
+mint green
+#eaf9d9
+
+green
+#bce784
+
+purple
+#7987c9
+
+dark
+#454b66
+
+*/
+
+* {
+	font-family: 'Arimo', sans-serif;
+	color: #454b66;
+	background-color: #eaf9d9;
+}
+
+/* FONTS */
+
+h1 {
+	font-family: 'Comfortaa', cursive;
+	font-size: 46px;
+}
+
+h2 {
+	font-size: 22px;
+	font-weight: bold;
+}
+
+h3 {
+	font-size: 18px;
+}
+
+/* CONTENT & SPACING */
+
+.container {
+	min-width: 300px;
+	max-width: 700px;
+	width: 55%;
+	margin: 0 auto;
+	background-color: #bce784;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
