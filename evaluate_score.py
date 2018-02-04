@@ -11,8 +11,9 @@ def evaluate(Input,External):
         score = TextBlob(word).sentiment.polarity
         if score:
             score -= 0.1
-        if word.lower() in External:
-            Sum += External[word.lower()]
+        Word = TextBlob(word).correct().lower().singularize()
+        if Word in External:
+            Sum += External[Word.lower()]
         Sum += score
         i += 1
     if Sum<=-0.75:
