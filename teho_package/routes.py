@@ -44,7 +44,3 @@ def log_after():
 @teho.route('/data')
 def data():
 	return render_template('data.html')
-<<<<<<< HEAD
-
-=======
->>>>>>> 9e08d9e69482f44094220e6da18aba7753d788f3
