@@ -18,27 +18,33 @@
       </div>
 
       <div class="main">
-        <h2>take back control of your day</h2>
-        <div class="cal-icon">
-          <div class="cal-event-1">
-            lunch at chipotle <br>
-            <span class="timing">12 - 1pm</span>
-          </div>
-          <div class="teho-event">
-            take 5 minutes to breathe <br>
-            <span class="timing">1 - 1:05pm</span>
-          </div>
-          <div class="cal-event-2">
-            sales call with andrea <br>
-            <span class="timing">1:15 - 2:15pm</span>
-          </div>
+        <h2>let's set up your teho!</h2>
+        <h3>what time(s) of day do you want your downtime?</h3>
+        <div class="checkboxes">
+            <label class="check"> 
+              <input type="checkbox" id="morning">
+              Morning (5am - 11am)
+              <span class="checkmark"></span>
+            </label>
+
+            <label class="check"> 
+              <input type="checkbox" id="afternoon">
+              Afternoon (11am-5pm)
+              <span class="checkmark"></span>
+            </label>
+
+            <label class="check"> 
+              <input type="checkbox" id="evening">
+              Evening (5pm-11pm)
+              <span class="checkmark"></span>
+            </label>
         </div>
-        <h3>personalized, automatic downtime when you need it the most</h3>
+
       </div>
 
       <div class="footer">
         <!--Add buttons to initiate auth sequence and sign out-->
-        <button id="authorize-button" onclick="handleAuthClick()"><span class="g-icon"></span>Sign in with Google</button>
+        <button class="next" onclick="handleAuthClick()">Next ></button>
         <!-- <button id="signout-button" onclick="handleSignoutClick()">sign out</button>
         <button id="eventbutton" onclick="callEventAdd()">Add event to Calendar</button>
         <button id="timebutton" onclick="loadDayEvents()">get available times</button> -->
