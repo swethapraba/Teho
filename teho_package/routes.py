@@ -1,5 +1,6 @@
-from flask import Flask, render_template
+from flask import render_template
 from teho_package import teho
+
 
 @teho.route('/')
 @teho.route('/index')

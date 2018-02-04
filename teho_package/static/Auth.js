@@ -9,8 +9,8 @@ var DISCOVERY_DOCS = ["https://www.googleapis.com/discovery/v1/apis/calendar/v3/
 // included, separated by spaces.
 var SCOPES = "https://www.googleapis.com/auth/calendar";
 
-var authorizeButton = document.getElementById('authorize-button');
-var signoutButton = document.getElementById('signout-button');
+var authorizeButton = $('#authorize-button');
+var signoutButton = $('#signout-button');
 
 var titles = [];
 var descriptions = [];
@@ -51,12 +51,12 @@ function initClient() {
  */
 function updateSigninStatus(isSignedIn) {
   if (isSignedIn) {
-    authorizeButton.style.display = 'none';
-    signoutButton.style.display = 'block';
-    loadDayEvents();
+    authorizeButton.css("display", "none");
+    signoutButton.css("display", "block");
+    //loadDayEvents();
   } else {
-    authorizeButton.style.display = 'block';
-    signoutButton.style.display = 'none';
+    authorizeButton.css("display", "none");
+    signoutButton.css("display", "block");
   }
 }
 
@@ -64,7 +64,7 @@ function updateSigninStatus(isSignedIn) {
  *  Sign in the user upon button click.
  */
 function handleAuthClick(event) {
-  gapi.auth2.getAuthInstance().signIn();
+    gapi.auth2.getAuthInstance().signIn();
 }
 
 /**
@@ -144,7 +144,7 @@ function loadDayEvents() {
 function getTimes(start, end) {
   $.ajax({
     type: "POST",
-    url: "http://localhost:5000/schedules/",
+    url: "http://localhost:5000/schedules",
     data: {
       'param1': start,
       'param2': end
@@ -153,6 +153,15 @@ function getTimes(start, end) {
       console.log(response['free_schedule'])
     }
   });
+}
+
+function callEventAdd()
+{
+  //var start = new Date('2018-05-28T17:00:00-07:00');
+  //var end = new Date('2018-05-28T09:00:00-07:00');
+  var start = "2018-05-28T17:00:00-07:00";
+  var end = "2018-05-28T09:00:00-07:00";
+  addEventToCal('meditate',5,'www.google.com', start, end,'America/LosAngeles');
 }
 
 /**

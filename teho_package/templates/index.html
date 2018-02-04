@@ -1,10 +1,15 @@
-<!DOCTYPE html>
 <html>
   <head>
     <title>teho</title>
     <meta charset='utf-8' />
+
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
     <link href="https://fonts.googleapis.com/css?family=Comfortaa|Arimo" rel="stylesheet">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="{{url_for('static', filename='Auth.js')}}"></script>
+    <script async defer src="https://apis.google.com/js/api.js" onload="this.onload=function(){};handleClientLoad()"
+    onreadystatechange="if (this.readyState === 'complete') this.onload()"></script>
   </head>
   <body>
     <div class="container">
@@ -13,30 +18,10 @@
       <h3>personalized, automatic downtime when you need it the most</h3>
 
     </div>
-
     <!--Add buttons to initiate auth sequence and sign out-->
-    <button id="authorize-button" style="display: none;">Authorize</button>
-    <button id="signout-button" style="display: none;">Sign Out</button>
-
-    <pre id="content"></pre>
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-
-    <script src="js/Auth.js" type="text/javascript"></script>
-    <script type="text/javascript">
-      function callEventAdd()
-      {
-        addEventToCal('meditate',5,'www.google.com', Date(2018-05-28T17:00:00-07:00), Date(2018-05-28T09:00:00-07:00),'America/LosAngeles');
-      }
-    </script>
-
-    <script async defer src="https://apis.google.com/js/api.js"
-      onload="this.onload=function(){};handleClientLoad()"
-      onreadystatechange="if (this.readyState === 'complete') this.onload()">
-    </script>
-
+    <button id="authorize-button" onclick="handleAuthClick()">Authorize</button>
+    <button id="signout-button" onclick=handleSignoutClick()>Sign Out</button>
     <button id="authorize-button" onclick="callEventAdd()">Add event to Calendar</button>
-    <button id="authorize-button" onclick="getTimes()">Get available times</button>
-
+    <button id="authorize-button" onclick="loadDayEvents()">Get available times</button>
   </body>
 </html>
