@@ -13,7 +13,7 @@ abhor,-3
 abilit,2
 aboard,1
 absentee,-1
-absolv,2
+absolve,2
 absorbed,1
 abuse,-3
 abusive,-3
@@ -21,7 +21,7 @@ accept,1
 accident,-2
 accomplish,2
 accusation,-2
-accus,-2
+accuse,-2
 ache,-2
 achievable,1
 aching,-2
@@ -29,7 +29,7 @@ acquit,2
 acrimonious,-3
 active,1
 adequate,1
-admir,3
+admire,3
 admit,-1
 admonish,-2
 adopt,1
@@ -44,12 +44,12 @@ affection,3
 afflicted,-1
 affronted,-1
 afraid,-2
-aggravat,-2
-aggressi,-2
+aggravate,-2
+aggressive,-2
 aghast,-2
 agog,2
 agonis,-3
-agoniz,-3
+agonize,-3
 agree,1
 alarm,-2
 alas,-1
@@ -59,7 +59,7 @@ alive,1
 allergic,-2
 allow,1
 alone,-2
-amaz,2
+amazing,2
 ambitious,2
 ambivalent,-1
 amuse,3
@@ -67,7 +67,8 @@ anger,-2
 angry,-3
 anguish,-3
 animosity,-2
-annoy,-2
+annoyed,-2
+annoying,-2
 antagonistic,-2
 anti,-1
 anticipation,1
@@ -77,12 +78,12 @@ apathetic,-3
 apathy,-3
 apeshit,-3
 apocalyptic,-2
-apolog,-1
+apologize,-1
 appall,-2
-appeas,2
+appease,2
 applaud,2
 applause,2
-appreciat,2
+appreciate,2
 apprehensive,-2
 approval,2
 approve,2
@@ -192,7 +193,7 @@ carefree,1
 careful,2
 carefully,2
 careless,-2
-cares,2
+caress,2
 casualt,-2
 catastrophe,-3
 catastrophic,-4
@@ -217,7 +218,7 @@ cherish,2
 chic,2
 childish,-2
 chilling,-1
-chok,-2
+choke,-2
 clarifies,2
 clarity,2
 clash,-2
@@ -246,11 +247,11 @@ competitive,2
 complacent,-2
 complain,-2
 comprehensive,2
-conciliat,2
+conciliate,2
 condemn,-2
-confiden,2
+confident,2
 conflict,-2
-confus,-2
+confuse,-2
 congrat,2
 consent,2
 consents,2
@@ -323,7 +324,7 @@ death,-2
 debonair,2
 debt,-2
 deceit,-3
-deceiv,-3
+deceive,-3
 deception,-3
 decisive,1
 dedicated,2
@@ -398,7 +399,7 @@ discouraged,-2
 discredited,-2
 disdain,-2
 disgrace,-2
-disguis,-1
+disguise,-1
 disgust,-3
 disheartened,-2
 dishonest,-2
@@ -408,6 +409,8 @@ disjointed,-2
 dislike,-2
 dismal,-2
 dismayed,-2
+dismiss,-2
+dismissed,-2
 disorder,-2
 disorganized,-2
 disoriented,-2
@@ -449,7 +452,7 @@ drop,-1
 drown,-2
 drunk,-2
 dubious,-2
-dud,-2
+dude,-2
 dull,-2
 dumb,-3
 dump,-1
