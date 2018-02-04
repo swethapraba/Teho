@@ -175,22 +175,22 @@ function addEventToCal(activity,duration,url,starting,ending,tzone)
   //ending = '2018-02-28T17:00:00-07:00';
   var eventSummary = "Take "+duration+" minutes to "+activity; //'summary' field needs a string.PARAM
   var buildDescript = "Here\'s Teho\'s recommendation for you: " + url; //build string
-  var startDate = starting;//'2018-05-28T09:00:00-07:00';
-  var endDate = ending; //'2018-05-28T17:00:00-07:00';
-  var zone = tzone;//'America/Los_Angeles';
+  var startDate = starting;//'2018-05-28T09:00:00-6:00';
+  var endDate = ending; //'2018-05-28T17:00:00-06:00';
+  //var zone = tzone;//'America/Los_Angeles';
   var event = {
     'summary': eventSummary,
     'description': buildDescript,//
     'colorId': '1',//This or code 3 is the purple shade we want, will have to experiment
     'start':
     {
-      'dateTime': startDate,
-      'timeZone': zone
+      'dateTime': startDate//,
+      //'timeZone': zone
     },
     'end': //
     {
-      'dateTime': endDate,
-      'timeZone': zone
+      'dateTime': endDate//,
+      //'timeZone': zone
     },
     /**'attendees': [//// we might not need this since just insert to primary calendar. made for sharing
       {'email': 'lpage@example.com'},////
