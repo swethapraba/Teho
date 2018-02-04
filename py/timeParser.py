@@ -1,3 +1,8 @@
+from flask import Flask
+app = Flask(__name__)
+
+
+
 def parse_time(List):
     Modified = [int(x.split(':')[0])*60+int(x.split(':')[1]) for x in List]
     #Create a list with the time in string format parsed and converted into integers (in minutes)
@@ -16,6 +21,10 @@ def concatenate(A,B):
         i += 1
     return C
 #Return a concatenated list with elements from A, B paired up individually
+
+@app.route('/schedules', methods=['POST'])
+def run():
+    schedule(request['param1'], request['param2'])
 
 def schedule(start,end):
     start,end = parse_time(start),parse_time(end)
@@ -47,15 +56,13 @@ def schedule(start,end):
     final_free_end = min_to_time(free_end)
     free_schedule = concatenate(final_free_start,final_free_end)
     #Concatenating all the start and end free time
-    return free_schedule
+    return json.dumps({'status':'OK','schedule':free_schedule});
 
 def break_insert(frequency,preferred_time_range,free_interval):
     if frequency > len(free_interval):
         break_insert(len(free_interval),preferred_time_range, free_interval)
     #else:
 
-def main():
-    schedule(param1, param2)
 #Test
 #A = parse_time(["2:00:00","4:00:00","8:00:00","12:00:00"])
 #A

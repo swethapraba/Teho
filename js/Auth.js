@@ -144,14 +144,14 @@ function loadDayEvents() {
 function getTimes(start, end) {
   $.ajax({
     type: "POST",
-    url: "~/py/timeParser.py",
+    url: "/schedules",
     data: {
-      param1: start,
-      param2: end
+      'param1': start,
+      'param2': end
+    },
+    success: function(response) {
+      console.log(response['free_schedule'])
     }
-  }).done(function( o ) {
-     print(o)
-     // add event to calendar
   });
 }
 
