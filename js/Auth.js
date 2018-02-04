@@ -159,19 +159,16 @@ function getTimes(start, end) {
  * Parameters: take in ________
  * Outcome: add event to GCal with provided specs
  */
-function addEventToCal()
+function addEventToCal(activity,duration,url,starting,ending,tzone)
 {
-  var name = "test"; //temporary for parameter
-  ////////////////////////////////
-  var eventSummary = name; //'summary' field needs a string. PARAM
-  ///include some parameters here to help with building description
-  /**
-  **/
-  var buildDescript = 'A chance to hear more about Google\'s developer products.'; //build string
-  var startDate = '2018-05-28T09:00:00-07:00'; //PARAM
-  var endDate = '2018-05-28T17:00:00-07:00'; //PARAM
-  var startZone = 'America/Los_Angeles'; //param
-  var endZone = 'America/Los_Angeles';//PARAM
+  //starting = '2018-05-28T09:00:00-07:00';
+  //ending = '2018-05-28T17:00:00-07:00';
+
+  var eventSummary = "Take " + duration + "minutes to " + activity; //'summary' field needs a string. PARAM
+  var buildDescript = "Here\'s Teho\'s recommendation for you: " + url; //build string
+  var startDate = starting;
+  var endDate = ending;
+  var zone = tzone;
   var event = {
     'summary': eventSummary,////
     'description': buildDescript,////
@@ -179,12 +176,12 @@ function addEventToCal()
     'start':
     {
       'dateTime': startDate,////
-      'timeZone': startZone
+      'timeZone': zone
     },
     'end': ////
     {
       'dateTime': endDate,////
-      'timeZone': endZone
+      'timeZone': zone
     },
     /**'attendees': [//// we might not need this since just insert to primary calendar. made for sharing
       {'email': 'lpage@example.com'},////
