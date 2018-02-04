@@ -122,6 +122,7 @@ function loadDayEvents() {
     if (events.length > 0) {
       for (i = 0; i < events.length; i++) {
         var event = events[i];
+        console.log(event.start.dateTime.getDay());
         var start = event.start.dateTime.toString();
         var end = event.end.dateTime.toString();
         var parsedStart = parseStartTime(start);
