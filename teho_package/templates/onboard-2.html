@@ -1,0 +1,62 @@
+<html>
+  <head>
+    <title>teho</title>
+    <meta charset='utf-8' />
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link href="https://fonts.googleapis.com/css?family=Comfortaa|Arimo|Roboto" rel="stylesheet">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="{{url_for('static', filename='Auth.js')}}"></script>
+    <script async defer src="https://apis.google.com/js/api.js" onload="this.onload=function(){};handleClientLoad()"
+    onreadystatechange="if (this.readyState === 'complete') this.onload()"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="heading">
+        <h1>teho</h1>
+      </div>
+
+      <div class="main">
+        <h2>let's set up your teho!</h2>
+        <h3>what kind of downtime is best for you?</h3>
+        <div class="checkboxes">
+            <label class="radio"> 
+              <input type="radio" id="breathing">
+              Deep Breathing
+              <span class="single-radio"></span>
+            </label>
+
+            <label class="radio"> 
+              <input type="radio" id="meditation">
+              Meditation
+              <span class="single-radio"></span>
+              <span class="small-text">COMING SOON</span>
+            </label>
+
+            <label class="radio"> 
+              <input type="radio" id="walking">
+              Walking
+              <span class="single-radio"></span>
+              <span class="small-text">COMING SOON</span>
+            </label>
+
+            <label class="radio"> 
+              <input type="radio" id="napping">
+              Napping
+              <span class="single-radio"></span>
+              <span class="small-text">COMING SOON</span>
+            </label>
+        </div>
+
+      </div>
+
+      <div class="footer">
+        <!-- THIS HAS TO TAKE US TO THE NEXT PAGE -->
+        <a href="{{ url_for('onboard_3') }}"><button class="next">Next ></button></a>
+
+      </div>
+
+    </div>
+  </body>
+</html>

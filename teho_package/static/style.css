@@ -30,6 +30,10 @@ h3 {
 	font-weight: lighter;
 }
 
+a {
+	text-decoration: none;
+}
+
 /* INDEX.HTML */
 
 body {
@@ -127,7 +131,7 @@ button {
 	font-size: 14px;
 }
 
-/* ONBOARD.HTML */
+/* ONBOARD-1.HTML */
 
 .checkboxes {
 	width: 260px;
@@ -204,10 +208,86 @@ button {
 	font-size: 16px;
 }
 
+/* ONBOARD-2.HTML */
 
+/* Customize the label (the container) */
+.radio {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 16px;
+  background-color: #eaf9d9;
+  color: #454b66;
+  padding: 10px 5px 10px 45px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  border-radius: 3px;
+}
 
+/* Hide the browser's default radio button */
+.radio input {
+  position: absolute;
+  opacity: 0;
+}
 
+/* Create a custom radio button */
+.single-radio {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  height: 25px;
+  width: 25px;
+  background-color: #bce784;
+  border-radius: 50%;
+}
 
+/* When the radio button is checked, add a blue background */
+.radio input:checked ~ .single-radio {
+  background-color: #7987c9;
+}
 
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.single-radio:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
 
+/* Show the indicator (dot/circle) when checked */
+.radio input:checked ~ .single-radio:after {
+  display: block;
+}
+
+/* Style the indicator (dot/circle) */
+.radio .single-radio:after {
+  top: 9px;
+  left: 9px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: white;
+}
+
+.small-text {
+	text-align: right;
+	font-size: 12px;
+	color: #bce784;
+}
+
+/* ONBOARD-3.HTML */
+
+.timing {
+	width: 140px;
+	text-align: left;
+	margin: 0 auto;
+}
+
+.timing .single-radio {
+	top: 6px;
+	left: 6px;
+}
 

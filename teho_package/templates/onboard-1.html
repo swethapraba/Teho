@@ -43,11 +43,8 @@
       </div>
 
       <div class="footer">
-        <!--Add buttons to initiate auth sequence and sign out-->
-        <button class="next" onclick="handleAuthClick()">Next ></button>
-        <!-- <button id="signout-button" onclick="handleSignoutClick()">sign out</button>
-        <button id="eventbutton" onclick="callEventAdd()">Add event to Calendar</button>
-        <button id="timebutton" onclick="loadDayEvents()">get available times</button> -->
+        <!-- THIS HAS TO TAKE US TO THE NEXT PAGE -->
+        <a href="{{ url_for('onboard_2') }}"><button class="next">Next ></button></a>
 
       </div>
 
