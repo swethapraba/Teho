@@ -6,6 +6,7 @@ Please Use #ScheduleRec+SentimentAnalysis.py and #dict.txt file for integration 
 
 Please use the two files I give above (make sure #dict.txt is in the same directory as the .py file).
 To Run the Functions, simply call the method like below:
+        
         break_insert(pref,start,end,descriptions)(duration)
         
         #For Demonstration, let's say the user have the following schedule on google calendar today:
