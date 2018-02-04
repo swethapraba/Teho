@@ -319,7 +319,7 @@ def break_insert(preferred_time_range,start,end,descriptions):
         return min_to_time(simplified),final_rec,final_emo_state
     return recommendation
 
-#Sample Run:
+#SAMPLE RUN (NOT ACTUAL CODES!):
 Input:
 start = ['7:00:00','9:30:00','10:00:00','11:15:00','12:00:00','13:00:00','14:15:00','15:30:00','16:30:00','18:30:00']
 end = ['8:30:00','10:00:00','11:00:00','12:00:00','13:00:00','14:00:00','15:30:00','16:30:00','17:00:00','20:30:00']
