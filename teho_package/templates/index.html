@@ -1,54 +1,59 @@
 <html>
   <head>
-    <title>Google Calendar API Quickstart</title>
+    <title>teho</title>
     <meta charset='utf-8' />
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link href="https://fonts.googleapis.com/css?family=Comfortaa|Arimo|Roboto" rel="stylesheet">
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="{{url_for('static', filename='Auth.js')}}"></script>
     <script async defer src="https://apis.google.com/js/api.js" onload="this.onload=function(){};handleClientLoad()"
     onreadystatechange="if (this.readyState === 'complete') this.onload()"></script>
   </head>
   <body>
+<<<<<<< HEAD
+    <div class="container">
+      <div class="heading">
+        <h1>teho</h1>
+        <h2>take back control of your day</h2>
+      </div>
+
+      <div class="main">
+        <div class="cal-icon">
+          <div class="cal-event-1">
+            lunch at chipotle <br>
+            <span class="timing">12 - 1pm</span>
+          </div>
+          <div class="teho-event">
+            take 5 minutes to breathe <br>
+            <span class="timing">1 - 1:05pm</span>
+          </div>
+          <div class="cal-event-2">
+            sales call with andrea <br>
+            <span class="timing">1:15 - 2:15pm</span>
+          </div>
+        </div>
+        <h3>personalized, automatic downtime when you need it the most</h3>
+      </div>
+
+      <div class="footer">
+        <!--Add buttons to initiate auth sequence and sign out-->
+        <button id="authorize-button" onclick="handleAuthClick()"><span class="g-icon"></span>Sign in with Google</button>
+        <!-- <button id="signout-button" onclick="handleSignoutClick()">sign out</button>
+        <button id="eventbutton" onclick="callEventAdd()">Add event to Calendar</button>
+        <button id="authorize-button" onclick="loadDayEvents()">get available times</button> -->
+
+      </div>
+
+    </div>
+=======
     <p>Google Calendar API Quickstart</p>
     <!--Add buttons to initiate auth sequence and sign out-->
     <button id="authorize-button" onclick="handleAuthClick()">Authorize</button>
     <button id="signout-button" onclick=handleSignoutClick()>Sign Out</button>
     <button id="eventbutton" onclick="callEventAdd()">Add event to Calendar</button>
     <button id="timebutton" onclick="loadDayEvents()">Get available times</button>
+>>>>>>> 7a02a5afa9f2ce880b6a159ed4c1459cf546c54c
   </body>
 </html>
-
-<!--<!DOCTYPE html>
-<html>
-  <head>
-    <title>Google Calendar API Quickstart</title>
-    <meta charset='utf-8' />
-  </head>
-  <body>
-    <p>Google Calendar API Quickstart</p>
-
-    <!-Add buttons to initiate auth sequence and sign out
-    <button id="authorize-button" style="display: none;">Authorize</button>
-    <button id="signout-button" style="display: none;">Sign Out</button>
-
-    <pre id="content"></pre>
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-
-    <script src="js/Auth.js" type="text/javascript"></script>
-    <script type="text/javascript">
-      function callEventAdd()
-      {
-        addEventToCal('meditate',5,'www.google.com', Date(2018-05-28T17:00:00-07:00), Date(2018-05-28T09:00:00-07:00),'America/LosAngeles');
-      }
-    </script>
-
-    <script async defer src="https://apis.google.com/js/api.js"
-      onload="this.onload=function(){};handleClientLoad()"
-      onreadystatechange="if (this.readyState === 'complete') this.onload()">
-    </script>
-
-    <button id="authorize-button" onclick="callEventAdd()">Add event to Calendar</button>
-    <button id="authorize-button" onclick="getTimes()">Get available times</button>
-
-  </body>
-</html>->

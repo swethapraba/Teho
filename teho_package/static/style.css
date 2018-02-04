@@ -1,0 +1,124 @@
+/* 
+
+mint green
+#eaf9d9
+
+green
+#bce784
+
+purple
+#7987c9
+
+dark
+#454b66
+
+/* FONTS */
+
+h1 {
+	font-family: 'Comfortaa', cursive;
+	font-size: 52px;
+	margin: 10px 10px;
+}
+
+h2 {
+	font-size: 22px;
+	font-weight: bold;
+}
+
+h3 {
+	font-size: 18px;
+	font-weight: lighter;
+}
+
+/* CONTENT & SPACING */
+
+body {
+	background-color: #eaf9d9;
+	text-align: center;
+	font-family: 'Arimo', sans-serif;
+	color: #454b66;
+	margin: -10px 0;
+}
+
+.container {
+	margin: 0 auto;
+}
+
+.heading {
+	background-color: #bce784;
+	width: 100%;
+	padding: 20px;
+}
+
+.main {
+	padding: 40px;
+}
+
+.cal-icon {
+	margin: 20px auto;
+
+}
+
+.cal-event-1, .cal-event-2, .teho-event {
+	color: #fff;
+	font-family: 'Roboto', sans-serif;
+	border-radius: 3px;
+	text-align: left;
+	padding: 5px 10px;
+	font-size: 12px;
+	font-weight: bold;
+}
+
+.timing {
+	font-weight: lighter;
+}
+
+.cal-event-1, .cal-event-2 {
+	width: 160px;
+	height: 50px;
+	margin: 5px auto;
+	background-color: #7987c9;
+}
+
+.teho-event {
+	position: relative;
+	left: 30%;
+	width: 160px;
+	height: 30px;
+	background-color: #454b66;
+}
+
+.footer {
+	display: relative;
+	width: 100%;
+}
+
+button {
+	margin: 10px auto;
+	display: block;
+	padding: 10px;
+	background-color: #bce784;
+	color: #454b66;
+	border: none;
+	border-radius: 10px
+}
+
+#authorize-button {
+	width: 180px;
+	height: 34px;
+	padding: 8px 10px 10px 10px;
+	color: #454b66;
+	font-family: 'Roboto', sans-serif;
+	font-size: 14px;
+}
+
+
+
+
+
+
+
+
+
+
+
