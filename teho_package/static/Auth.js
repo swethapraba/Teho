@@ -163,7 +163,7 @@ function callEventAdd()
   //var end = "2018-05-28T09:00:00-07:00";
   //addEventToCal('meditate',5,'www.google.com', start, end,'America/LosAngeles');
   //addEventToCal('meditate',5,'www.google.com');
-  addEventToCal('meditate');
+  addEventToCal('meditate',5);
 }
 
 /**
@@ -172,19 +172,19 @@ function callEventAdd()
  */
 //function addEventToCal(activity,duration,url,starting,ending,tzone)
 //function addEventToCal(activity,duration,url)
-function addEventToCal(activity)
+function addEventToCal(activity,duration)
 {
   //starting = '2018-02-28T09:00:00-07:00';
   //ending = '2018-02-28T17:00:00-07:00';
 
-  var eventSummary = activity; //test line
-  //var eventSummary = "Take " + duration + "minutes to " + activity; //'summary' field needs a string.PARAM
+  //var eventSummary = activity; //test line
+  var eventSummary = "Take " + duration + "minutes to " + activity; //'summary' field needs a string.PARAM
   //var buildDescript = "Here\'s Teho\'s recommendation for you: " + url; //build string
   var startDate = '2018-05-28T09:00:00-07:00';//starting;
   var endDate = '2018-05-28T17:00:00-07:00';//ending;
   var zone = 'America/Los_Angeles';//tzone;
   var event = {
-    'summary': 'test',//eventSummary,//
+    'summary': eventSummary,//
     'description': 'test',//buildDescript,//
     'colorId': '1',//This or code 3 is the purple shade we want, will have to experiment
     'start':
