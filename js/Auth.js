@@ -142,11 +142,9 @@ function loadDayEvents() {
  * Parameters: take in ________
  * Outcome: add event to GCal with provided specs
  */
-function addEventToCal()
+function addEventToCal(activity,duration,)
 {
-  var name = "test"; //temporary for parameter
-  ////////////////////////////////
-  var eventSummary = name; //'summary' field needs a string. PARAM
+  var eventSummary = "Take " + duration + "minutes to " + activity; //'summary' field needs a string. PARAM
   ///include some parameters here to help with building description 
   /**
   **/
