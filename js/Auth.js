@@ -164,7 +164,7 @@ function addEventToCal(activity,duration,url,starting,ending,tzone)
   //starting = '2018-02-28T09:00:00-07:00';
   //ending = '2018-02-28T17:00:00-07:00';
 
-  var eventSummary = "Take " + duration + "minutes to " + activity; //'summary' field needs a string. PARAM
+  var eventSummary = "Take " + duration + "minutes to " + activity; //'summary' field needs a string.PARAM
   var buildDescript = "Here\'s Teho\'s recommendation for you: " + url; //build string
   var startDate = starting;
   var endDate = ending;
