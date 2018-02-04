@@ -1,5 +1,6 @@
 # Teho
 
+# Flask Info
 Everything must be in a single directory (directory name is Teho)
   - Application must exist in a package (package name is teho_package)
     - package definition: Subdirectory with an __init__.py file (+some other garbage later on)
