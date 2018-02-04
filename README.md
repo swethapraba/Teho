@@ -14,3 +14,5 @@ Everything must be in a single directory (directory name is Teho)
         - have handlers called view functions which are mapped to root url's so flask knows which logic to execute when client requests url
       - routes.py file: contains view functions
   - top level python script that defines flask application instance (script name is flask_script.py)
+  - templates folder: contains html files
+  - static folder: contains javascript and css files
