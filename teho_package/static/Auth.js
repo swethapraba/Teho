@@ -193,7 +193,7 @@ function addEventToCal()
     },
     'end': //
     {
-      'dateTime': '2018-05-28T17:00:00-07:00',//endDate,//
+      'dateTime': endDate,//
       'timeZone': 'America/Los_Angeles'//zone
     },
     /**'attendees': [//// we might not need this since just insert to primary calendar. made for sharing
