@@ -159,17 +159,17 @@ function addEventToCal(activity,duration,url,starting,ending,tzone)
   var endDate = ending;
   var zone = tzone;
   var event = {
-    'summary': eventSummary,////
-    'description': buildDescript,////
+    'summary': eventSummary,//
+    'description': buildDescript,//
     'colorId': '1',//This or code 3 is the purple shade we want, will have to experiment
     'start':
     {
-      'dateTime': startDate,////
+      'dateTime': startDate,//
       'timeZone': zone
     },
-    'end': ////
+    'end': //
     {
-      'dateTime': endDate,////
+      'dateTime': endDate,//
       'timeZone': zone
     },
     /**'attendees': [//// we might not need this since just insert to primary calendar. made for sharing
