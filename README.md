@@ -2,7 +2,7 @@
 
 Please Use #ScheduleRec+SentimentAnalysis.py and #dict.txt file for integration of functionality
 
-WHEN INTEGRATING,
+(From Paul): WHEN INTEGRATING,
 
 Please use the two files I give above (make sure #dict.txt is in the same directory as the .py file).
 To Run the Functions, simply call the method like below:
