@@ -1,3 +1,5 @@
+from teho_package import teho
+
 #Preliminary Function 1
 def parse_time(List):
 #Create a list with the time in string format parsed and converted into integers (in minutes)
@@ -22,7 +24,7 @@ def concatenate(A,B):
 
 #PRIMARY FUNCTION 1
 def schedule(start,end):
-#return two lists containing the starting and ending time of free-time interval
+    #return two lists containing the starting and ending time of free-time interval
     start,end = parse_time(start),parse_time(end)
     #Parse the start and end lists
     first_start = start[0]
