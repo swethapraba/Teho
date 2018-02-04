@@ -15,10 +15,10 @@
     <div class="container">
       <div class="heading">
         <h1>teho</h1>
-        <h2>take back control of your day</h2>
       </div>
 
       <div class="main">
+        <h2>take back control of your day</h2>
         <div class="cal-icon">
           <div class="cal-event-1">
             lunch at chipotle <br>
@@ -38,8 +38,10 @@
 
       <div class="footer">
         <!--Add buttons to initiate auth sequence and sign out-->
-        <button id="authorize-button" onclick="handleAuthClick()"><span class="g-icon"></span>Sign in with Google</button>
-         <button id="signout-button" onclick="handleSignoutClick()">sign out</button>
+        <!-- <button id="authorize-button" onclick="handleAuthClick()"><span class="g-icon"></span>Sign in with Google</button> -->
+
+        <a href="{{ url_for('onboard_1') }}"><button class="next">Start</button></a>
+        <!-- <button id="signout-button" onclick="handleSignoutClick()">sign out</button>
         <button id="eventbutton" onclick="callEventAdd()">Add event to Calendar</button>
         <button id="timebutton" onclick="loadDayEvents()">get available times</button> <!---->
 
