@@ -17,7 +17,6 @@ def concatenate(A,B):
     return C
 #Return a concatenated list with elements from A, B paired up individually
 
-@app.route('/schedules/', methods=['POST'])
 def run():
     schedule(request['param1'], request['param2'])
 
