@@ -1,8 +1,3 @@
-from flask import Flask
-app = Flask(__name__)
-
-
-
 def parse_time(List):
     Modified = [int(x.split(':')[0])*60+int(x.split(':')[1]) for x in List]
     #Create a list with the time in string format parsed and converted into integers (in minutes)

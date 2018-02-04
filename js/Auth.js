@@ -144,7 +144,7 @@ function loadDayEvents() {
 function getTimes(start, end) {
   $.ajax({
     type: "POST",
-    url: "/schedules",
+    url: "http://localhost:5000/schedules/",
     data: {
       'param1': start,
       'param2': end
