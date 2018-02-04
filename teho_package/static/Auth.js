@@ -169,7 +169,7 @@ function callEventAdd()
  * Outcome: add event to GCal with provided specs
  */
 //function addEventToCal(activity,duration,url,starting,ending,tzone)
-function addEventToCal(activity,duration,url,starting,tzone)
+function addEventToCal(activity,duration,url,starting,ending,tzone)
 {
   //starting = '2018-02-28T09:00:00-07:00';
   //ending = '2018-02-28T17:00:00-07:00';
