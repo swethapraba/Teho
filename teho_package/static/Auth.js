@@ -17,6 +17,21 @@ var descriptions = [];
 var startTimes = [];
 var endTimes = [];
 
+var req = new XMLHttpRequest()
+req.onreadystatechange = function()
+{
+    if (req.readyState == 4)
+    {
+        if (req.status != 200)
+        {
+            //error handling code here
+        }
+        else
+        {
+        }
+    }
+}
+
 /**
  *  On load, called to load the auth2 library and API client library.
  */
@@ -135,6 +150,8 @@ function loadDayEvents() {
         }
       }
     }
+  }).then(function(response) {
+    getTimes(startTimes, endTimes)
   });
 }
 
@@ -142,15 +159,38 @@ function loadDayEvents() {
  * Calls python function to retrieve the available time blocks.
  */
 function getTimes(start, end) {
-  $.ajax({
-    type: "POST",
-    url: "http://localhost:5000/schedules",
+  /*$.ajax({
+    url: "/schedule",
     data: {
       'param1': start,
       'param2': end
     },
+    type: "POST",
     success: function(response) {
       console.log(response['free_schedule'])
+    },
+    error: function(error) {
+      console.log(error)
+    }
+  });*/
+  /*req.open('POST', '/schedule')
+  req.setRequestHeader("Content-type", "application/x-www-form-urlencoded")
+  var postVars = 'param1='+startTimes+'&param2='+endTimes
+  req.send(postVars)*/
+  var data = {
+    'param1': start,
+    'param2': end
+  };
+
+  $.ajax({
+    url: "http://localhost:5000/schedule/",
+    type: "POST",
+    data: JSON.stringify(data), 
+    success: function(response) {
+      console.log(response)
+    },
+    error: function(error) {
+      console.log(error)
     }
   });
 }
