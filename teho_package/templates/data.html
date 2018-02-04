@@ -18,31 +18,27 @@
       </div>
 
       <div class="main-log">
-        <h2>good afternoon, carol!</h2>
-        <h3>how are you feeling right now?</h3>
-        <div class="slide-container">
-          <p>how sad or happy?</p>
-          <div class="slider-happy-container">
-            <input type="range" min="1" max="5" value="3" class="slider-happy" id="happy-sad">
-          </div>
-          <p>how anxious or calm?</p>
-          <div class="slider-anxious-container">
-            <input type="range" min="1" max="5" value="3" class="slider-anxious" id="calm-anxious">
-          </div>
+        <h2>carol, you've had a great week!</h2>
+        <h3>check out your data:</h3>
+        <div class="chart-container">
+
         </div>
 
-        <h3>tell us more!</h3>
-          <textarea rows="4" cols="50">
-          </textarea>
+        <div class="label-container">
+          <h3><span class="label">happiest day:</span> Thursday</h3>
+          <h3><span class="label">calmest day:</span> Saturday</h3>
+          <h3><span class="label">maximum downtime:</span> Monday &amp; Tuesday</h3>
+        </div>
       </div>
 
       <div class="footer">
         <!-- THIS HAS TO TAKE US TO THE NEXT PAGE -->
-        <a href="{{ url_for('breathe') }}"><button class="next">Start Breathing ></button></a>
+        <a href="{{ url_for('index') }}"><button class="next">Home</button></a>
 
       </div>
 
     </div>
   </body>
 </html>
+
 

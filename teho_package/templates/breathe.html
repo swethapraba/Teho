@@ -1,0 +1,64 @@
+<html>
+  <head>
+    <title>teho</title>
+    <meta charset='utf-8' />
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link href="https://fonts.googleapis.com/css?family=Comfortaa|Arimo|Roboto" rel="stylesheet">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="{{url_for('static', filename='Auth.js')}}"></script>
+    <script async defer src="https://apis.google.com/js/api.js" onload="this.onload=function(){};handleClientLoad()"
+    onreadystatechange="if (this.readyState === 'complete') this.onload()"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="heading">
+        <h1>teho</h1>
+      </div>
+  
+      <!-- THIS HAS TO TAKE US TO THE NEXT PAGE -->
+      <a href="{{ url_for('log_after') }}"><button class="x-out">X</button></a>
+  
+      <div class="main-breathe">
+        <div id='b'>
+          <div class='mid'>
+            <div class='o o-1'></div>
+          </div>
+          <div class='mid'>
+            <div class='o o-2'></div>
+          </div>
+          <div class='mid'>
+            <div class='o o-3'></div>
+          </div>
+          <div class='mid'>
+            <div class='o o-4'></div>
+          </div>
+          <div class='mid'>
+            <div class='o o-5'></div>
+          </div>
+          <div class='mid'>
+            <div class='o o-6'></div>
+          </div>
+          <div class='mid'>
+            <div class='o o-7'></div>
+          </div>
+          <div class='mid'>
+            <div class='o o-8'></div>
+          </div>
+          <div class='mid'>
+            <div class='o o-9'></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer">
+        <div class="credits">
+          <a class="credit-text" href="https://codepen.io/shriyanevatia/pen/PQNGVQ?limit=all&page=8&q=pulse">animation credit</a>
+        </div>
+      </div>
+
+    </div>
+  </body>
+</html>
+
