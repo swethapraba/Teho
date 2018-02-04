@@ -1,0 +1,49 @@
+<html>
+  <head>
+    <title>teho</title>
+    <meta charset='utf-8' />
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link href="https://fonts.googleapis.com/css?family=Comfortaa|Arimo|Roboto" rel="stylesheet">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="{{url_for('static', filename='Auth.js')}}"></script>
+    <script async defer src="https://apis.google.com/js/api.js" onload="this.onload=function(){};handleClientLoad()"
+    onreadystatechange="if (this.readyState === 'complete') this.onload()"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="heading">
+        <h1>teho</h1>
+      </div>
+
+      <div class="main-log">
+        <h2>carol, hope you enjoyed that deep breathing exercise!</h2>
+        <h3>how are you feeling now?</h3>
+        <div class="slide-container">
+          <p>how sad or happy?</p>
+          <div class="slider-happy-container">
+            <input type="range" min="1" max="5" value="3" class="slider-happy" id="happy-sad">
+          </div>
+          <p>how anxious or calm?</p>
+          <div class="slider-anxious-container">
+            <input type="range" min="1" max="5" value="3" class="slider-anxious" id="calm-anxious">
+          </div>
+        </div>
+
+        <h3>tell us more! has anything changed?</h3>
+          <textarea rows="4" cols="50">
+          </textarea>
+      </div>
+
+      <div class="footer">
+        <!-- THIS HAS TO TAKE US TO THE NEXT PAGE -->
+        <a href="{{ url_for('data') }}"><button class="next">View My Data</button></a>
+
+      </div>
+
+    </div>
+  </body>
+</html>
+
+
